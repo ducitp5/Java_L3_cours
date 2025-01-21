@@ -10,6 +10,7 @@
 	<classpathentry kind="src" path="Cours applique Partie 1 - 2"/>
 	<classpathentry kind="src" path="Cours applique Partie 3"/>
 	<classpathentry kind="src" path="Cours applique Partie 4 - entrees sortie"/>
+	<classpathentry kind="src" path="Cours applique Partie 4 - mvc"/>
 	<classpathentry kind="lib" path="H:/Universite/paris V/les matieres/L3/Semestre I/Java avance/cours/support/support du 01 12 12/coursjava_121201.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
