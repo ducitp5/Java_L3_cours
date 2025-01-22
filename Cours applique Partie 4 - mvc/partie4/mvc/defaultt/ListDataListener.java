@@ -1,3 +1,4 @@
+package partie4.mvc.defaultt;
 public interface ListDataListener extends EventListener {
 /* Sent after the indices in the index0,index1
 * interval have been inserted in the data model.

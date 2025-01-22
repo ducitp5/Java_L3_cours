@@ -1,3 +1,4 @@
+package partie4.mvc.defaultt;
 import javax.swing.event.ListDataListener;
 
 public interface ListModel {

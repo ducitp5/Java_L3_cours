@@ -1,3 +1,4 @@
+package partie4.mvc.defaultt;
 import java.awt.BorderLayout;
 
 import javax.swing.JPanel;

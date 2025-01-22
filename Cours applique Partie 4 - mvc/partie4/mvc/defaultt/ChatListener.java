@@ -1,3 +1,4 @@
+package partie4.mvc.defaultt;
 
 public interface ChatListener {
 

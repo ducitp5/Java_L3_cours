@@ -1,3 +1,4 @@
+package partie4.mvc.defaultt;
 abstract class MonListModel extends AbstractListModel {
 private int size=5;
 private int multiplicateur=3;
