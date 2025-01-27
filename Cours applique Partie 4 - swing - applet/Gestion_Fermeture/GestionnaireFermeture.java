@@ -13,6 +13,8 @@ class GestionnaireFermeture implements WindowListener {
 	public GestionnaireFermeture(JFrame frame) 		{	this.frame 	 =	frame;		}
 
 	public void windowClosing(WindowEvent event){
+		
+		System.out.print("event - " +event);
 
 		int reponse = JOptionPane.showConfirmDialog( this.frame,"Voulez-vous quitter ?" , "Confirmation" , JOptionPane.YES_NO_OPTION);
 

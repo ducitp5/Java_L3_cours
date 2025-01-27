@@ -19,7 +19,7 @@ public class PanelClickColor extends JPanel {
 
 	private static 	JLabel 		 label	   		=   new JLabel("Compteur : " + 0);	;				// pas PanelClickColor.this.label.setText
 	
-	private     	JButton		 bOk			=   new JButton("OK");
+	public     		JButton		 bOk			=   new JButton("OK");
 	private			JButton  	 bChoixCouleur  =   new JButton("thay doi couleur");	
 				
 				
