@@ -11,11 +11,15 @@ public class CompteurPlus2 extends Compteur {
 	 * 1
 	 */
 	public CompteurPlus2() {
+		System.out.println("CompteurPlus2() - " +Thread.currentThread().getId());
+
 		this.defaultValue = 3;
 	}
 
 	/** incrémentation de la valeur de ce compteur */
 	public void incrementer() {
+		
+		System.out.println("CompteurPlus2.incrementer - " +Thread.currentThread().getId());
 		incrementer(this.defaultValue);
 	}
 

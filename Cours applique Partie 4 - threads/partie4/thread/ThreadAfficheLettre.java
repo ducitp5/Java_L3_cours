@@ -21,18 +21,28 @@ public class ThreadAfficheLettre extends Thread {
 	/** le travail à effectuer par ce thread */
 	public void run() {
 		while (cpt <= lim) {
+
+			System.out.println("ThreadAfficheLettre.run - " +this.lettre +" - " +Thread.currentThread().getId());
+
 			cpt++;
 			System.out.print(lettre);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.flush();
 		}
 	}
 
 	public static void main(String[] args) throws Exception {
 		
-		Thread ta = new ThreadAfficheLettre('a', 200);		ta.start();
-		Thread tb = new ThreadAfficheLettre('b', 200);		tb.start();
-		
-		
+		System.out.println("ThreadAfficheLettre.main - " +Thread.currentThread().getId());
+
+		Thread ta = new ThreadAfficheLettre('a', 2);		ta.start();
+		Thread tb = new ThreadAfficheLettre('b', 5);		tb.start();
+				
 	}
 
 }

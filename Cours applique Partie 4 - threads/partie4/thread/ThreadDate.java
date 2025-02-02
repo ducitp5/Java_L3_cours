@@ -49,13 +49,12 @@ public class ThreadDate extends Thread {
 		 * creation d'un thread permettant l'affichage toutes les 60 secondes de
 		 * la date sur la sortie standard pendant 1 heure
 		 */
-		Thread threadDate 	= new ThreadDate(1 , 20);		threadDate.start();
+		Thread threadDate 	= new ThreadDate(1 , 5);		threadDate.start();
 		
-		Thread t 			= new ThreadDate(12, 202);		t.start();
+		Thread t 			= new ThreadDate(5, 20);		t.start();
 		
-		/** demarrer ce thread */
-					
-
+		System.out.print("efg");		
+		System.out.print("abc");		
 	}
 
 }

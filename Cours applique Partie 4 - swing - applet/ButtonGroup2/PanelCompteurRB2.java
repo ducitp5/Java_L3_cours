@@ -27,7 +27,8 @@ public class PanelCompteurRB2 extends JPanel {
 	class EcouteurCompteur implements ActionListener{
 
 		public void actionPerformed(ActionEvent e) {
-			
+			System.out.println("EcouteurCompteur.actionPerformed - " +Thread.currentThread().getId());
+
 			PanelCompteurRB2.this.compteur.incrementer();
 			PanelCompteurRB2.this.label.setText("Compteur : " +PanelCompteurRB2.this.compteur.getValue( ));
 			
@@ -45,7 +46,8 @@ public class PanelCompteurRB2 extends JPanel {
 		} 
 		
 		public void actionPerformed(ActionEvent e) {
-			
+			System.out.println("EcouteurRB.actionPerformed - " +Thread.currentThread().getId());
+
 			PanelCompteurRB2.this.compteur.setDefaultIncrValue(this.valeur);
 			
 		}
@@ -56,7 +58,8 @@ public class PanelCompteurRB2 extends JPanel {
 	public PanelCompteurRB2() {
 		
 		super(new BorderLayout());
-		
+		System.out.println("PanelCompteurRB2() - " +Thread.currentThread().getId());
+
 		this.add(label , BorderLayout.NORTH); 	
 		
 		
@@ -79,6 +82,8 @@ public class PanelCompteurRB2 extends JPanel {
 	}	
 	
 	public static void main(String [ ] args){
+
+		System.out.println("PanelCompteurRB2.main - " +Thread.currentThread().getId());
 
 		JFrame 			frame 		=   new JFrame("223 Cliquez Compteur RB! 2");
 		
