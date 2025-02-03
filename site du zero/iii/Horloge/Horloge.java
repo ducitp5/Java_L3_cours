@@ -1,13 +1,12 @@
 package iii.Horloge;
 
 import java.util.Calendar;
-import java.util.ArrayList;
 
-public class Horloge implements Observable {
+public class Horloge {
 	
 	private Calendar calendar;
 	private String hour = "";
-	private ArrayList<Observateur> listObservateur = new ArrayList<Observateur>();
+	private Observateur listObservateur;
 
 	public	int $i = 0;
 	
@@ -27,9 +26,9 @@ public class Horloge implements Observable {
 						"0" + this.calendar.get(Calendar.SECOND)
 						: this.calendar.get(Calendar.SECOND));
 			
-			this.updateObservateur();
-
-			System.out.println($i + " - " +listObservateur);
+			listObservateur.update(this.hour);
+			
+			System.out.println($i + " -- " +listObservateur);
 			
 			try {
 				Thread.sleep(1000);
@@ -45,19 +44,7 @@ public class Horloge implements Observable {
 	public void addObservateur(Observateur obs) {
 		System.out.println("Horloge - addObservateur - " +hour + " - " +obs);
 
-		this.listObservateur.add(obs);
+		this.listObservateur = (obs);
 	}
-
-	public void delObservateur() {
-//		this.listObservateur = new ArrayList<Observateur>();
-	}
-
-	public void updateObservateur() {
-		
-		for (Observateur obs : this.listObservateur) {
-			obs.update(this.hour);
-			
-			System.out.println("Horloge - updateObservateur - " +hour + " - " +$i);
-		}
-	}
+	
 }
