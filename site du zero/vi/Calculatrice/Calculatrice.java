@@ -23,7 +23,8 @@ public class Calculatrice extends JFrame {
 	Dimension 	dim 			= new Dimension(50, 40);
 	Dimension 	dim2 			= new Dimension(50, 31);
 	double 		chiffre1;
-	boolean 	clicOperateur 	= false, update = false;
+	boolean 	clicOperateur 	= false,
+				update 			= false;
 	String 		operateur 		= "";
 
 	private void initComposant() {
@@ -47,43 +48,44 @@ public class Calculatrice extends JFrame {
 		for (int i = 0; i < tab_string.length; i++) {
 
 			tab_button[i] = new JButton(tab_string[i]);
-			tab_button[i].setPreferredSize(dim);
 
 			switch (i) {
 			
-				case 11:
+				case 11:   			// =
 					tab_button[i].addActionListener(new EgalListener());
+					tab_button[i].setPreferredSize(dim);
 					chiffre.add(tab_button[i]);
 					break;
-				case 12:
+				case 12:			// C
 					tab_button[i].setForeground(Color.red);
 					tab_button[i].addActionListener(new ResetListener());
 					tab_button[i].setPreferredSize(dim2);
 					operateur.add(tab_button[i]);
 					break;
-				case 13:
+				case 13:			// +
 					tab_button[i].addActionListener(new PlusListener());
 					tab_button[i].setPreferredSize(dim2);
 					operateur.add(tab_button[i]);
 					break;
-				case 14:
+				case 14:			// -
 					tab_button[i].addActionListener(new MoinsListener());
 					tab_button[i].setPreferredSize(dim2);
 					operateur.add(tab_button[i]);
 					break;
-				case 15:
+				case 15:			// *
 					tab_button[i].addActionListener(new MultiListener());
 					tab_button[i].setPreferredSize(dim2);
 					operateur.add(tab_button[i]);
 					break;
-				case 16:
+				case 16:			// /
 					tab_button[i].addActionListener(new DivListener());
 					tab_button[i].setPreferredSize(dim2);
 					operateur.add(tab_button[i]);
 					break;
 				default:
-					chiffre.add(tab_button[i]);
 					tab_button[i].addActionListener(new ChiffreListener());
+					tab_button[i].setPreferredSize(dim);
+					chiffre.add(tab_button[i]);
 					break;
 			}
 		}
