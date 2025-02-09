@@ -62,8 +62,8 @@ public class Panneau extends JPanel {
 		}
 	}
 
-	int 	increment, 
-			drawSize;
+	public int 	increment;
+	int drawSize;
 	boolean reduce;
 
 	public void drawMorph(Graphics g) {
