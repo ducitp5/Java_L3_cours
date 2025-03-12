@@ -13,5 +13,6 @@
 	<classpathentry kind="src" path="Cours applique Partie 4 - threads"/>
 	<classpathentry kind="src" path="site du zero"/>
 	<classpathentry kind="src" path="Cours applique Partie 4 - swing - applet"/>
+	<classpathentry kind="src" path="Practice"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
