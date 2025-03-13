@@ -24,6 +24,10 @@ public class ListEx2 {
         // Append all elements to the end of list.
 //        bookList.addAll(bookList1);
         
+        Book $bb = bookList.get(1);
+        
+        $bb.setTitle("nn");
+        
         for(Book book: bookList)  {
             System.out.println(book.getTitle() + " / " + book.getPrice());
         }

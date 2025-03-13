@@ -2,6 +2,7 @@ package iterable.Collection;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.o7planning.list.ex.Book;
 
@@ -25,8 +26,12 @@ public class List_stream {
         bookList.addAll(bookList1);
         
         // Using Stream
-        bookList.stream() //
-             .filter(b -> b.getPrice() > 100) // Filter Books with price > 100
-             .forEach(b -> System.out.println(b.getTitle() +" / " + b.getPrice()));
+        
+        Stream<Book> $bookStream = bookList.stream(); // Filter Books with price > 100
+        Stream<Book> $bookStream2 = bookList.stream().filter(b -> b.getPrice() > 100); // Filter Books with price > 100
+
+        $bookStream2.forEach(b -> System.out.println(b.getTitle() +" / " + b.getPrice()));
+        
+        System.out.println("bb " +bookList);
     }
 }

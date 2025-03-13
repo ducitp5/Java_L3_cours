@@ -15,12 +15,14 @@ public class Map_of_ex2 {
 		);
 
         // Update new value.
-        empMap.put("E02", 5000); // ==> throw UnsupportedOperationException
+//        empMap.put("E02", 5000); // ==> throw UnsupportedOperationException
         
         empMap.put("E05", 3000); // ==> throw UnsupportedOperationException
         
-        empMap.remove("E01");  // ==> throw UnsupportedOperationException
+//        empMap.remove("E01");  // ==> throw UnsupportedOperationException
         
-        empMap.clear();   // ==> throw UnsupportedOperationException
+//        empMap.clear();   // ==> throw UnsupportedOperationException
+        
+        System.out.println("  -- " +empMap);
     }
 }

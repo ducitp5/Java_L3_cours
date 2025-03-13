@@ -23,7 +23,7 @@ public class ArrayList_sync {
          threadA.start();
          threadB.start();
          
-//         threadA.join();
+         threadA.join();
          threadB.join();
          
          for(String s: syncList)  {

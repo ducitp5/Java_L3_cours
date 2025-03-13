@@ -8,10 +8,12 @@ public class Map_ofEntry_ex1 {
 
         Map.Entry<String, Integer> entry1 = Map.entry("E01", 1000);
         Map.Entry<String, Integer> entry2 = Map.entry("E02", 2000);
-        Map.Entry<String, Integer> entry3 = Map.entry("E03", 1200);
+        Map.Entry entry3 = Map.entry("E03", 1200);
 
         Map<String, Integer> unmodifiableMap = Map.ofEntries(entry1, entry2, entry3);
         
+        Map.Entry<String, Integer> entry4 = Map.entry("E03", 1200);
+//        unmodifiableMap.clear();
         unmodifiableMap.forEach((empNumber, salary) -> {
             System.out.println("Emp Number: " + empNumber + ", Salary: " + salary);
         });
